@@ -2,8 +2,12 @@ import restaurantBackground from './assets/restaurant-bg.jpg';
 import './styles.css'
 import { renderMenu } from './menu';
 const hero = document.querySelector('.content');
+const homeButton = document.querySelector('.nav__button--home');
+const menuButton = document.querySelector('.nav__button--menu');
+const aboutButton = document.querySelector('.nav__button--about');
 
 const renderHeroContent = () => {
+    hero.innerHTML = '';
     let heading = document.createElement('h1')
     let image = document.createElement('img')
     let description = document.createElement('p');
@@ -17,5 +21,7 @@ const renderHeroContent = () => {
     hero.append(heading, image, description);
 }
 
-renderMenu();
-// document.addEventListener('DOMContentLoaded', renderHeroContent);
+
+document.addEventListener('DOMContentLoaded', renderHeroContent);
+homeButton.addEventListener('click', renderHeroContent);
+menuButton.addEventListener('click', renderMenu);

@@ -5,6 +5,7 @@ import burger from './assets/menu-burger.webp';
 import salad from './assets/menu-salad.webp';
 import pizza from './assets/menu-pizza.webp';
 export const renderMenu = () => {
+    hero.innerHTML = '';
     const menuTitle = document.createElement('h1');
     const menuWrapper = document.createElement('div');
     const menuType = document.createElement('h2');
